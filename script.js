@@ -325,19 +325,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // === Scroll Reveal Animations ===
   const revealElements = document.querySelectorAll('.reveal, .reveal-stagger');
 
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
     });
-  }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px'
-  });
 
-  revealElements.forEach(el => revealObserver.observe(el));
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    // Fallback for older browsers (e.g. iPhone 5/6 with old iOS)
+    revealElements.forEach(el => el.classList.add('visible'));
+  }
 
   // === Parallax Effect ===
   const parallaxElements = document.querySelectorAll('.parallax-element');
