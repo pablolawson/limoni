@@ -12,6 +12,15 @@ const translations = {
     nav_contact: "Contacto",
     nav_faq: "FAQ",
 
+    // About
+    about_title: "Soy Agus, <span>la de las lámparas</span>",
+    about_desc_1: "Hace un tiempo descubrí que podía transformar hilos simples en algo mágico. Cada lámpara que creo es una expresión de creatividad y cariño, pensada para darle calidez a tu espacio.",
+    about_desc_2: "Trabajo desde mi taller, eligiendo cada color y textura para que cada pieza sea verdaderamente única. No hay dos lámparas iguales, porque cada una lleva un poquito de mi corazón.",
+    about_feat_1: "Hecho a mano",
+    about_feat_2: "Diseños únicos",
+    about_feat_3: "Materiales naturales",
+    about_feat_4: "Con amor",
+
     hero_badge: "Hecho a mano con amor",
     hero_title: "Iluminá tu hogar con <span class='highlight'>calidez artesanal</span>",
     hero_subtitle: "Lámparas únicas tejidas a mano. Diseños que cuentan historias y transforman espacios.",
@@ -119,6 +128,15 @@ const translations = {
     nav_about: "About",
     nav_contact: "Contact",
     nav_faq: "FAQ",
+
+    // About
+    about_title: "I'm Agus, <span>the lamp maker</span>",
+    about_desc_1: "Some time ago I discovered I could transform simple threads into something magical. Each lamp I create is an expression of creativity and affection, designed to bring warmth to your space.",
+    about_desc_2: "I work from my workshop, choosing every color and texture to make each piece truly unique. There are no two identical lamps, because each one carries a little bit of my heart.",
+    about_feat_1: "Handmade",
+    about_feat_2: "Unique designs",
+    about_feat_3: "Natural materials",
+    about_feat_4: "With love",
 
     hero_badge: "Handmade with love",
     hero_title: "Light up your home with <span class='highlight'>artisanal warmth</span>",
