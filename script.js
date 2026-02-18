@@ -117,6 +117,10 @@ const translations = {
     faq_wholesale_q: "¿Hacen ventas mayoristas o para proyectos de decoración?",
     faq_wholesale_a: "¡Sí! Trabajamos con hoteles, restaurantes, decoradores, arquitectos y tiendas. Ofrecemos precios especiales por cantidad y desarrollos a medida. Escribinos para coordinar una reunión.",
 
+    // Instagram
+    insta_title: "Seguinos en Instagram",
+    insta_subtitle: "Encontrá inspiración y mirá el proceso detrás de cada pieza",
+
     // Footer
     footer_copy: "© 2024 Limoni Objetos. Hecho con ❤️ y luz."
   },
@@ -233,6 +237,10 @@ const translations = {
 
     faq_wholesale_q: "Do you do wholesale or decoration projects?",
     faq_wholesale_a: "Yes! We work with hotels, restaurants, decorators, architects, and shops. We offer special prices for bulk orders and custom developments. Write to us to coordinate a meeting.",
+
+    // Instagram
+    insta_title: "Follow us on Instagram",
+    insta_subtitle: "Find inspiration and see the process behind each piece",
 
     // Footer
     footer_copy: "© 2024 Limoni Objetos. Handmade with ❤️ and light."
