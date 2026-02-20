@@ -61,6 +61,16 @@ const translations = {
     prod_cylinder_desc: "Diseño clásico cilíndrico, tejido en fibras naturales con brillo dorado interior.",
     prod_sphere_title: "Colgante Esfera",
     prod_sphere_desc: "Esfera perfecta de luz difusa, ideal para dormitorios o espacios de relax.",
+    prod_cacao_title: "Colgante Cacao",
+    prod_cacao_desc: "Lámpara colgante tejida a mano con hilos naturales y cálidos.",
+    prod_fresia_title: "Colgante Fresia",
+    prod_fresia_desc: "Lámpara colgante tejida a mano con hilos naturales y cálidos.",
+    prod_gardenia_title: "Colgante Gardenia",
+    prod_gardenia_desc: "Lámpara colgante tejida a mano con hilos naturales y cálidos.",
+    prod_hortensia_title: "Colgante Hortensia",
+    prod_hortensia_desc: "Lámpara colgante tejida a mano con hilos naturales y cálidos.",
+    prod_kika_title: "Colgante Kika",
+    prod_kika_desc: "Lámpara colgante tejida a mano con hilos naturales y cálidos.",
 
     // Process
     process_title: "El Proceso",
@@ -182,6 +192,16 @@ const translations = {
     prod_cylinder_desc: "Classic cylindrical design, woven in natural fibers with golden interior shine.",
     prod_sphere_title: "Sphere Pendant",
     prod_sphere_desc: "Perfect sphere of diffused light, ideal for bedrooms or relaxation spaces.",
+    prod_cacao_title: "Cacao Pendant",
+    prod_cacao_desc: "Hand-woven pendant lamp with natural and warm threads.",
+    prod_fresia_title: "Fresia Pendant",
+    prod_fresia_desc: "Hand-woven pendant lamp with natural and warm threads.",
+    prod_gardenia_title: "Gardenia Pendant",
+    prod_gardenia_desc: "Hand-woven pendant lamp with natural and warm threads.",
+    prod_hortensia_title: "Hortensia Pendant",
+    prod_hortensia_desc: "Hand-woven pendant lamp with natural and warm threads.",
+    prod_kika_title: "Kika Pendant",
+    prod_kika_desc: "Hand-woven pendant lamp with natural and warm threads.",
 
     // Process
     process_title: "The Process",
