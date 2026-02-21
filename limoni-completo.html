@@ -589,6 +589,10 @@ ul {
   border-radius: 400px 400px 20px 20px;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  /* Safari fix for border-radius + transform */
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
+  transform: translateZ(0);
 }
 
 .hero-img-main {
