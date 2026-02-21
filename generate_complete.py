@@ -70,10 +70,32 @@ def generate_complete_html():
 
     html_content = re.sub(r'<img[^>]+>', replacer, html_content)
 
-    # Inline CSS Background Images (e.g. parallax-bg if any)
-    # style="background-image: url('...')"
-    # This is trickier regex. I'll stick to img tags for now as major assets are img tags.
-    
+    # Inline Products Data
+    products_path = os.path.join(base_dir, "products.json")
+    if os.path.exists(products_path):
+        import json
+        with open(products_path, "r", encoding="utf-8") as f:
+            products_data = json.load(f)
+        
+        # Inline images inside products_data
+        for p in products_data:
+            if "images" in p:
+                new_images = []
+                for img_path in p["images"]:
+                    full_img_path = os.path.join(base_dir, img_path)
+                    base64_data = get_base64_image(full_img_path)
+                    new_images.append(base64_data if base64_data else img_path)
+                p["images"] = new_images
+        
+        # Embed as global variable before script.js
+        json_str = json.dumps(products_data, ensure_ascii=False)
+        data_script = f'<script>window.productsData = {json_str};</script>'
+        # Insert before the first script tag or at end of body
+        if '<script>' in html_content:
+            html_content = html_content.replace('<script>', data_script + '\n<script>', 1)
+        else:
+            html_content = html_content.replace('</body>', data_script + '\n</body>')
+
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(html_content)
     

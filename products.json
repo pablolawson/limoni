@@ -1,0 +1,162 @@
+[
+    {
+        "id": "cacao",
+        "category": "colgante",
+        "images": [
+            "images/lamp-cacao.png"
+        ],
+        "tag": "new",
+        "price": 35000,
+        "price_original": null,
+        "dimensions": "Ø 30cm x 30cm alto",
+        "stock": 5,
+        "name_es": "Cacao",
+        "name_en": "Cacao",
+        "desc_es": "Lámpara colgante tejida a mano con hilos naturales y cálidos.",
+        "desc_en": "Hand-woven pendant lamp with natural and warm threads."
+    },
+    {
+        "id": "fresia",
+        "category": "colgante",
+        "images": [
+            "images/lamp-fresia.png"
+        ],
+        "tag": "new",
+        "price": 35000,
+        "price_original": null,
+        "dimensions": "Ø 20cm x 20cm alto",
+        "stock": 3,
+        "name_es": "Fresia",
+        "name_en": "Fresia",
+        "desc_es": "Lámpara colgante tejida a mano con hilos naturales y cálidos.",
+        "desc_en": "Hand-woven pendant lamp with natural and warm threads."
+    },
+    {
+        "id": "gardenia",
+        "category": "colgante",
+        "images": [
+            "images/lamp-gardenia.png"
+        ],
+        "tag": "new",
+        "price": 35000,
+        "price_original": null,
+        "dimensions": "Ø 20cm x 20cm alto",
+        "stock": 2,
+        "name_es": "Gardenia",
+        "name_en": "Gardenia",
+        "desc_es": "Lámpara colgante tejida a mano con hilos naturales y cálidos.",
+        "desc_en": "Hand-woven pendant lamp with natural and warm threads."
+    },
+    {
+        "id": "hortensia",
+        "category": "colgante",
+        "images": [
+            "images/lamp-hortensia.png"
+        ],
+        "tag": "new",
+        "price": 35000,
+        "price_original": null,
+        "dimensions": "Ø 30cm x 30cm alto",
+        "stock": 4,
+        "name_es": "Hortensia",
+        "name_en": "Hortensia",
+        "desc_es": "Lámpara colgante tejida a mano con hilos naturales y cálidos.",
+        "desc_en": "Hand-woven pendant lamp with natural and warm threads."
+    },
+    {
+        "id": "kika",
+        "category": "colgante",
+        "images": [
+            "images/lamp-kika.png"
+        ],
+        "tag": "new",
+        "price": 35000,
+        "price_original": null,
+        "dimensions": "Ø 20cm x 20cm alto",
+        "stock": 1,
+        "name_es": "Kika",
+        "name_en": "Kika",
+        "desc_es": "Lámpara colgante tejida a mano con hilos naturales y cálidos.",
+        "desc_en": "Hand-woven pendant lamp with natural and warm threads."
+    },
+    {
+        "id": "diamante",
+        "category": "colgante",
+        "images": [
+            "images/lamp-colgante.png"
+        ],
+        "tag": "new",
+        "price": 45000,
+        "price_original": 50000,
+        "dimensions": "Ø 40cm x 35cm alto",
+        "stock": 2,
+        "name_es": "Diamante",
+        "name_en": "Diamond",
+        "desc_es": "Lámpara colgante con forma de diamante, tejida en hilos crema y terracotta.",
+        "desc_en": "Diamond-shaped pendant lamp, woven in cream and terracotta threads."
+    },
+    {
+        "id": "sage",
+        "category": "mesa",
+        "images": [
+            "images/lamp-verde.png"
+        ],
+        "tag": "popular",
+        "price": 38000,
+        "price_original": null,
+        "dimensions": "Alt. 25cm | Ø 15cm",
+        "stock": 8,
+        "name_es": "Mesa Sage",
+        "name_en": "Sage Table",
+        "desc_es": "Lámpara de mesa en tonos sage y beige, perfecta para crear ambientes acogedores.",
+        "desc_en": "Sage and beige table lamp, perfect for creating cozy atmospheres."
+    },
+    {
+        "id": "lavanda",
+        "category": "pie",
+        "images": [
+            "images/lamp-pie.png"
+        ],
+        "tag": null,
+        "price": 120000,
+        "price_original": null,
+        "dimensions": "Alt. 1.50m | Pantalla Ø 40cm",
+        "stock": 1,
+        "name_es": "Pie Lavanda",
+        "name_en": "Lavender Floor",
+        "desc_es": "Lámpara de pie alta, envuelta en hilos lavanda y crema con luz dorada envolvente.",
+        "desc_en": "Tall floor lamp, wrapped in lavender and cream threads with enveloping golden light."
+    },
+    {
+        "id": "geo",
+        "category": "mesa",
+        "images": [
+            "images/lamp-diamante.png"
+        ],
+        "tag": null,
+        "price": 42000,
+        "price_original": null,
+        "dimensions": "30cm x 30cm x 30cm",
+        "stock": 3,
+        "name_es": "Geo Ámbar",
+        "name_en": "Geo Amber",
+        "desc_es": "Estructura geométrica con hilos amarillos y naturales. Un diseño que atrapa la luz.",
+        "desc_en": "Geometric structure with yellow and natural threads. A design that catches the light."
+    },
+    {
+        "id": "cilindro",
+        "category": "mesa",
+        "images": [
+            "images/lamp-hero.png"
+        ],
+        "tag": "classic",
+        "price": 35000,
+        "price_original": null,
+        "dimensions": "Ø 20cm x 40cm alto",
+        "stock": 10,
+        "name_es": "Cilindro Natural",
+        "name_en": "Natural Cylinder",
+        "desc_es": "Diseño clásico cilíndrico, tejido en fibras naturales con brillo dorado interior.",
+        "desc_en": "Classic cylindrical design, woven in natural fibers with golden interior shine."
+    }
+]
