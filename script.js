@@ -49,7 +49,7 @@ const translations = {
     tag_classic: "Clásica",
 
     // Products (Names & Descs)
-    prod_diamond_title: "Colgante Diamante",
+    prod_diamond_title: "Diamante",
     prod_diamond_desc: "Lámpara colgante con forma de diamante, tejida en hilos crema y terracotta.",
     prod_sage_title: "Mesa Sage",
     prod_sage_desc: "Lámpara de mesa en tonos sage y beige, perfecta para crear ambientes acogedores.",
@@ -180,7 +180,7 @@ const translations = {
     tag_classic: "Classic",
 
     // Products (Names & Descs)
-    prod_diamond_title: "Diamond Pendant",
+    prod_diamond_title: "Diamond",
     prod_diamond_desc: "Diamond-shaped pendant lamp, woven in cream and terracotta threads.",
     prod_sage_title: "Sage Table",
     prod_sage_desc: "Sage and beige table lamp, perfect for creating cozy atmospheres.",
