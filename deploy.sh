@@ -14,8 +14,12 @@ fi
 
 echo ""
 echo "📦 Haciendo commit y push..."
+read -p "💬 Mensaje del commit (Enter = auto): " MSG
+if [ -z "$MSG" ]; then
+    MSG="🍋 update $(date '+%Y-%m-%d %H:%M')"
+fi
 git add -A
-git commit -m "🍋 sync productos $(date '+%Y-%m-%d %H:%M')"
+git commit -m "$MSG"
 git push
 
 echo ""

@@ -101,7 +101,7 @@ def row_to_product(row, index):
     # Obtener ID (obligatorio)
     product_id = row.get("id", "").strip()
     if not product_id:
-        name = row.get("name_es", f"producto-{index}")
+        name = row.get("name", row.get("name_es", f"producto-{index}"))
         product_id = sanitize_id(name)
 
     # Parsear precio
@@ -137,8 +137,8 @@ def row_to_product(row, index):
         "price_original": price_original,
         "dimensions": row.get("dimensions", "").strip(),
         "stock": stock,
-        "name_es": row.get("name_es", "").strip(),
-        "name_en": row.get("name_en", "").strip(),
+        "name_es": row.get("name", row.get("name_es", "")).strip(),
+        "name_en": row.get("name", row.get("name_en", "")).strip(),
         "desc_es": row.get("desc_es", "").strip(),
         "desc_en": row.get("desc_en", "").strip(),
     }
@@ -237,7 +237,7 @@ def main():
         sys.exit(1)
 
     # Validar columnas
-    expected_cols = {"id", "category", "price", "name_es", "name_en"}
+    expected_cols = {"id", "category", "price"}
     actual_cols = set(rows[0].keys())
     missing = expected_cols - actual_cols
     if missing:
