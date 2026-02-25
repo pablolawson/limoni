@@ -91,7 +91,7 @@
         "dimensions": "Ø 40cm x 35cm alto",
         "stock": 2,
         "name_es": "Diamante",
-        "name_en": "Diamond",
+        "name_en": "Diamante",
         "desc_es": "Lámpara colgante con forma de diamante, tejida en hilos crema y terracotta.",
         "desc_en": "Diamond-shaped pendant lamp, woven in cream and terracotta threads."
     },
@@ -107,7 +107,7 @@
         "dimensions": "Alt. 25cm | Ø 15cm",
         "stock": 8,
         "name_es": "Sage",
-        "name_en": "Sage Table",
+        "name_en": "Sage",
         "desc_es": "Lámpara de mesa en tonos sage y beige, perfecta para crear ambientes acogedores.",
         "desc_en": "Sage and beige table lamp, perfect for creating cozy atmospheres."
     },
@@ -123,7 +123,7 @@
         "dimensions": "Alt. 1.50m | Pantalla Ø 40cm",
         "stock": 1,
         "name_es": "Lavanda",
-        "name_en": "Lavender Floor",
+        "name_en": "Lavanda",
         "desc_es": "Lámpara de pie alta, envuelta en hilos lavanda y crema con luz dorada envolvente.",
         "desc_en": "Tall floor lamp, wrapped in lavender and cream threads with enveloping golden light."
     },
@@ -139,7 +139,7 @@
         "dimensions": "30cm x 30cm x 30cm",
         "stock": 3,
         "name_es": "Geo Ámbar",
-        "name_en": "Geo Amber",
+        "name_en": "Geo Ámbar",
         "desc_es": "Estructura geométrica con hilos amarillos y naturales. Un diseño que atrapa la luz.",
         "desc_en": "Geometric structure with yellow and natural threads. A design that catches the light."
     },
@@ -154,8 +154,8 @@
         "price_original": null,
         "dimensions": "Ø 20cm x 40cm alto",
         "stock": 10,
-        "name_es": "Cilindro Natural",
-        "name_en": "Natural Cylinder",
+        "name_es": "Cilindro",
+        "name_en": "Cilindro",
         "desc_es": "Diseño clásico cilíndrico, tejido en fibras naturales con brillo dorado interior.",
         "desc_en": "Classic cylindrical design, woven in natural fibers with golden interior shine."
     },
@@ -171,7 +171,7 @@
         "dimensions": "Ø 28cm x 58cm alto",
         "stock": 2,
         "name_es": "Hongo Prueba",
-        "name_en": "Hongo Test",
+        "name_en": "Hongo Prueba",
         "desc_es": "descripción en español",
         "desc_en": "description in english"
     }
