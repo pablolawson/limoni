@@ -260,11 +260,17 @@ function renderProducts(products, lang) {
     const waPrefix = translations[lang].wa_message_prefix || "Hola Limoni! Me interesa la lámpara";
     const waUrl = `https://wa.me/?text=${encodeURIComponent(waPrefix + ' ' + name)}`;
 
+    const imagesJson = JSON.stringify(p.images).replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    const multiIndicator = p.images.length > 1
+      ? `<span class="product-multi-img">📷 ${p.images.length} fotos</span>`
+      : '';
+
     return `
       <div class="product-card" data-category="${p.category}" style="animation: fadeInUp 0.4s ease forwards ${index * 0.1}s">
         <div class="product-card-image">
-          <img src="${p.images[0]}" alt="${name}" loading="lazy" onclick="openLightbox('${p.images[0]}', '${name}')" style="cursor: zoom-in;">
+          <img src="${p.images[0]}" alt="${name}" loading="lazy" onclick="openLightbox(${imagesJson}, '${name.replace(/'/g, "\\'")}')" style="cursor: zoom-in;">
           ${tag}
+          ${multiIndicator}
         </div>
         <div class="product-card-body">
           <h3>${name}</h3>
@@ -282,15 +288,57 @@ function renderProducts(products, lang) {
   }).join('');
 }
 
-function openLightbox(src, alt) {
+let lightboxImages = [];
+let lightboxIndex = 0;
+
+function openLightbox(images, alt, startIndex) {
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
-  if (lightbox && lightboxImg) {
-    lightboxImg.src = src;
-    lightboxImg.alt = alt;
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+
+  if (!lightbox || !lightboxImg) return;
+
+  // Support both string (single image) and array
+  if (typeof images === 'string') {
+    lightboxImages = [images];
+  } else {
+    lightboxImages = images;
   }
+  lightboxIndex = startIndex || 0;
+
+  updateLightboxImage();
+
+  // Show/hide nav arrows based on image count
+  const hasMultiple = lightboxImages.length > 1;
+  if (lightboxPrev) lightboxPrev.style.display = hasMultiple ? 'flex' : 'none';
+  if (lightboxNext) lightboxNext.style.display = hasMultiple ? 'flex' : 'none';
+  if (lightboxCounter) lightboxCounter.style.display = hasMultiple ? 'block' : 'none';
+
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function updateLightboxImage() {
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+  if (lightboxImg && lightboxImages[lightboxIndex]) {
+    lightboxImg.src = lightboxImages[lightboxIndex];
+  }
+  if (lightboxCounter && lightboxImages.length > 1) {
+    lightboxCounter.textContent = `${lightboxIndex + 1} / ${lightboxImages.length}`;
+  }
+}
+
+function lightboxPrev() {
+  lightboxIndex = (lightboxIndex - 1 + lightboxImages.length) % lightboxImages.length;
+  updateLightboxImage();
+}
+
+function lightboxNext() {
+  lightboxIndex = (lightboxIndex + 1) % lightboxImages.length;
+  updateLightboxImage();
 }
 
 // Main logic
@@ -397,7 +445,18 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
   if (lightbox) lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+  // Lightbox gallery navigation
+  const lightboxPrevBtn = document.getElementById('lightboxPrev');
+  const lightboxNextBtn = document.getElementById('lightboxNext');
+  if (lightboxPrevBtn) lightboxPrevBtn.addEventListener('click', (e) => { e.stopPropagation(); lightboxPrev(); });
+  if (lightboxNextBtn) lightboxNextBtn.addEventListener('click', (e) => { e.stopPropagation(); lightboxNext(); });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxPrev();
+    if (e.key === 'ArrowRight') lightboxNext();
+  });
 
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

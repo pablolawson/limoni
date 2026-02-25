@@ -81,9 +81,9 @@
     },
     {
         "id": "diamante",
-        "category": "colgante",
+        "category": "mesa",
         "images": [
-            "images/lamp-colgante.png"
+            "images/lamp-diamante.png"
         ],
         "tag": "new",
         "price": 45000,
@@ -99,7 +99,7 @@
         "id": "sage",
         "category": "mesa",
         "images": [
-            "images/lamp-verde.png"
+            "images/lamp-sage.png"
         ],
         "tag": "popular",
         "price": 38000,
@@ -115,7 +115,7 @@
         "id": "lavanda",
         "category": "pie",
         "images": [
-            "images/lamp-pie.png"
+            "images/lamp-lavanda.png"
         ],
         "tag": null,
         "price": 120000,
@@ -131,7 +131,7 @@
         "id": "geo",
         "category": "mesa",
         "images": [
-            "images/lamp-diamante.png"
+            "images/lamp-geo.png"
         ],
         "tag": null,
         "price": 42000,
@@ -147,7 +147,7 @@
         "id": "cilindro",
         "category": "mesa",
         "images": [
-            "images/lamp-hero.png"
+            "images/lamp-cilindro.png"
         ],
         "tag": "classic",
         "price": 35000,
@@ -158,5 +158,21 @@
         "name_en": "Natural Cylinder",
         "desc_es": "Diseño clásico cilíndrico, tejido en fibras naturales con brillo dorado interior.",
         "desc_en": "Classic cylindrical design, woven in natural fibers with golden interior shine."
+    },
+    {
+        "id": "hongo",
+        "category": "mesa",
+        "images": [
+            "images/lamp-hongo.png"
+        ],
+        "tag": "test",
+        "price": 80000,
+        "price_original": null,
+        "dimensions": "Ø 28cm x 58cm alto",
+        "stock": 2,
+        "name_es": "Hongo Prueba",
+        "name_en": "Hongo Test",
+        "desc_es": "descripción en español",
+        "desc_en": "description in english"
     }
 ]
