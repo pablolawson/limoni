@@ -174,5 +174,22 @@
         "name_en": "Hongo Prueba",
         "desc_es": "descripción en español",
         "desc_en": "description in english"
+    },
+    {
+        "id": "verde",
+        "category": "mesa",
+        "images": [
+            "images/lamp-verde.png",
+            "images/lamp-verde_2.png"
+        ],
+        "tag": "tag test",
+        "price": 100000,
+        "price_original": 120000,
+        "dimensions": "Ø 20cm x 40cm alto",
+        "stock": 1,
+        "name_es": "Verde",
+        "name_en": "",
+        "desc_es": "desc español",
+        "desc_en": "ingles"
     }
 ]
