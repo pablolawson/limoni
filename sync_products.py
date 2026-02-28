@@ -49,31 +49,50 @@ def extract_drive_file_id(url):
 
 def download_drive_image(file_id, dest_path):
     """Descarga una imagen de Google Drive dado su File ID."""
-    download_url = f"https://drive.google.com/uc?export=download&id={file_id}"
+    session = requests.Session()
 
-    try:
-        response = requests.get(download_url, timeout=30, allow_redirects=True)
+    # Intentar múltiples URLs de descarga
+    download_urls = [
+        f"https://drive.google.com/uc?export=download&id={file_id}",
+        f"https://lh3.googleusercontent.com/d/{file_id}",
+    ]
 
-        # Google Drive puede devolver una página de confirmación para archivos grandes
-        if b"confirm=" in response.content and response.headers.get("content-type", "").startswith("text/html"):
-            # Extraer token de confirmación
-            confirm_match = re.search(r'confirm=([a-zA-Z0-9_-]+)', response.text)
-            if confirm_match:
-                confirm_token = confirm_match.group(1)
-                download_url = f"{download_url}&confirm={confirm_token}"
-                response = requests.get(download_url, timeout=30, allow_redirects=True)
+    for download_url in download_urls:
+        try:
+            response = session.get(download_url, timeout=30, allow_redirects=True)
 
-        if response.status_code == 200 and len(response.content) > 1000:
-            with open(dest_path, "wb") as f:
-                f.write(response.content)
-            return True
-        else:
-            print(f"  ⚠️  Descarga fallida (status={response.status_code}, size={len(response.content)} bytes)")
-            return False
+            # Google Drive puede devolver una página de confirmación para archivos grandes
+            content_type = response.headers.get("content-type", "")
+            if "text/html" in content_type:
+                # Buscar token de confirmación en la página
+                confirm_match = re.search(r'confirm=([a-zA-Z0-9_-]+)', response.text)
+                if confirm_match:
+                    confirm_token = confirm_match.group(1)
+                    confirmed_url = f"https://drive.google.com/uc?export=download&id={file_id}&confirm={confirm_token}"
+                    response = session.get(confirmed_url, timeout=30, allow_redirects=True)
+                    content_type = response.headers.get("content-type", "")
 
-    except requests.RequestException as e:
-        print(f"  ❌ Error de red: {e}")
-        return False
+                # Buscar también el form de descarga con uuid
+                uuid_match = re.search(r'name="uuid" value="([^"]+)"', response.text)
+                if uuid_match and "text/html" in content_type:
+                    uuid_val = uuid_match.group(1)
+                    post_url = f"https://drive.usercontent.google.com/download?id={file_id}&export=download"
+                    response = session.post(post_url, data={"uuid": uuid_val}, timeout=30, allow_redirects=True)
+                    content_type = response.headers.get("content-type", "")
+
+            # Validar que realmente sea una imagen
+            if response.status_code == 200 and "image" in content_type and len(response.content) > 1000:
+                with open(dest_path, "wb") as f:
+                    f.write(response.content)
+                return True
+
+        except requests.RequestException as e:
+            print(f"  ❌ Error de red: {e}")
+            continue
+
+    print(f"  ⚠️  No se pudo descargar la imagen (file_id={file_id})")
+    print(f"      Intentá descargarla manualmente y ponerla en images/")
+    return False
 
 
 def fetch_sheet_csv(csv_url):
