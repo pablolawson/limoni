@@ -191,5 +191,22 @@
         "name_en": "",
         "desc_es": "desc español",
         "desc_en": "ingles"
+    },
+    {
+        "id": "rosa",
+        "category": "colgante",
+        "images": [
+            "images/lamp-rosa.png",
+            "images/lamp-rosa_2.png"
+        ],
+        "tag": null,
+        "price": 110000,
+        "price_original": 150000,
+        "dimensions": "Ø 30cm x 30cm alto",
+        "stock": 10,
+        "name_es": "Rosa",
+        "name_en": "",
+        "desc_es": "Lámpara colgante tejida a mano con hilos naturales y cálidos.",
+        "desc_en": "Hand-woven pendant lamp with natural and warm threads."
     }
 ]
